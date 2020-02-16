@@ -1,39 +1,48 @@
 @font-face {
-  font-family: "GothamPro";
-  src: url("./fonts/GothamPro Light.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: "OpenSans";
+    src: local("OpenSans"), local("OpenSans"),
+        url("./fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("./fonts/OpenSans-Regular.woff") format("woff"),
+        url("./fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+		font-display: swap;
+  }
 
 @font-face {
-  font-family: "GothamPro Bold";
-  src: url("./fonts/GothamPro Bold.ttf");
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: "GothamPro";
+    src: local("Gotham Pro Light"), local("Gotham-Pro-Light"),
+        url("./fonts/GothamPro-Light.woff2") format("woff2"),
+        url("./fonts/GothamPro-Light.woff") format("woff"),
+        url("./fonts/GothamPro-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+		font-display: swap;
+  }
 
 @font-face {
-  font-family: "OpenSans";
-  src: url("./fonts/OpenSans.ttf");
-  font-weight: 400;
-  font-style: normal; 
-}
+    font-family: "GothamPro Bold";
+    src: local("Gotham Pro Bold"), local("Gotham-Pro-Bold"),
+        url("./fonts/GothamProBold.woff") format("woff"),
+        url("./fonts/GothamProBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+		font-display: swap;
+  }
 
 body {
-	background-color: #f2f2f2;
-	font-family: "OpenSans";
+	background-color: #ffffff;
+	font-family: "OpenSans", Arial, sans-serif;
 	font-weight: 400;
 	font-size: 24px;
 	color: #2f2f2f;
 
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
-
-	margin-top: ;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "GothamPro Bold";
+	font-family: "GothamPro Bold", Arial, sans-serif;
 	font-weight: bold;
 	color: #10181f;
 }
@@ -62,6 +71,22 @@ a:hover, a:focus {
 	-webkit-background-size: cover;
 }
 
+#contentwrap {
+	background: url("./img/bg2.png")	no-repeat center;
+	background-size: 100%;
+
+	background-attachment: relative;
+
+	background-position: 0 -900px;
+
+	width: 100%;
+	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-webkit-background-size: cover;
+}
+
 .img-logo {
 	width: 128px;
 }
@@ -72,17 +97,16 @@ a:hover, a:focus {
 	color: #ffffff;
 	font-size: 42px;
 	font-weight: bold;
-	letter-spacing: -4px;
+	letter-spacing: -3px;
 	text-transform: uppercase;
 }
 
 .second-title {
-	width: 380px;
-	font-family: "GothamPro";
+	font-family: "GothamPro", Arial, sans-serif;
 	color: #ffffff;
 	font-size: 42px;
-	font-weight: 200;
-	letter-spacing: -4px;
+	font-weight: 400;
+	letter-spacing: -50;
 	text-transform: uppercase;
 }
 
@@ -92,19 +116,20 @@ a:hover, a:focus {
 
 	font-size: 12px;
 	color: #ffffff;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 400;
 }
 
 .btn {
-	margin-bottom: 196px;
+	padding: 6px 18px;
 
-	box-shadow: 0 0 10px 0 rgba(78,43,83,0.6), 0 0 5px 0 rgba(78,43,83,0.8), 0 0 10px 0 rgba(78,43,83,0.6);
+	margin-bottom: 196px;
+	box-shadow: 0 0 50px 10px #784383;
 
 	font-size: 8px;
 	color: #ffffff;
-	font-family: "Open Sans";
-	font-weight: 350;
+	font-family: "Open Sans", Arial, sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
 
 	border-radius: 22px;
@@ -117,34 +142,42 @@ a:hover, a:focus {
 }
 
 .pre-paragraph {
+
 	font-size: 14px;
 	letter-spacing: 5px;
-	color: #854399;
-	font-family: "Open Sans";
+	color: #c19fcb;
+	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 600;
 
 	text-transform: uppercase;
 }
 
-.paragraph-content {
-	width: 300px;
-}
-
 .main-paragraph {
+	position: relative;
+	left: -3px;
+
 	font-size: 42px;
-	letter-spacing: -2px;
+	letter-spacing: -4px;
+
 	line-height: 42px;
 	color: #10181f;
-	font-family: "Open Sans";
+	font-family: "GothamPro", Arial, sans-serif;
+	font-weight: 300;
+}
+
+.main-paragraph > b {
+	font-family: "GothamPro Bold", Arial, sans-serif;
 }
 
 .basic-paragraph {
 	padding-top: 48px;
 	padding-bottom: 56px;
 
+	right: 100px;
+
 	font-size: 12px;
 	color: #2f2f2f;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 400;
 }
 
@@ -175,6 +208,7 @@ a:hover, a:focus {
 } 
 
 .demo-paragraph {
+	white-space: pre-wrap;
 	padding-top: 16px;
 	padding-bottom: 100px;
 
@@ -182,7 +216,7 @@ a:hover, a:focus {
 
 	font-size: 12px;
 	color: #2f2f2f;
-	font-family: "Open Sans";
+	font-family: "Open Sans", Arial, sans-serif;
 	font-weight: 400;
 }
 
